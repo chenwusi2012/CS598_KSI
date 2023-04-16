@@ -30,7 +30,7 @@ The code for model evaluation is included in the notebook KSI.ipynb.
 - CAML:
 - CAML with KSI framework:
 ## Result
-The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset.
+The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI.ipynb.
 
 | Method     | Macro AUC | Micro AUC | Macro F1 | Micro F1 | Test loss value | Top-10 recall |
 |------------|-----------|-----------|----------|----------|-----------------|---------------|
@@ -43,27 +43,27 @@ The following table shows the performance of the standalone baseline models and 
 | CAML       | 0.854     | 0.978     | 0.281    | 0.676    | 0.033           | 0.808         |
 | KSI+CAML   | 0.878     | 0.980     | 0.292    | 0.664    | 0.032           | 0.814         |
 
-The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset.
+The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables **lower_limit_freq** and **upper_limit_freq** in the section **Data Pre-processing 1** in the notebook KSI.ipynb and running the notebook.
 
 | Baseline model | Code group | Standalone model | Model with KSI | Improvement |
 |----------------|------------|------------------|----------------|-------------|
-| RNN            | [1, 10]    | 0.520 (0.78)     | 0.709 (0.80)   | 0.189       |
-| RNN            | [11, 50]   | 0.461 (0.79)     | 0.724 (0.83)   | 0.263       |
-| RNN            | [51, 100]  | 0508 (0.84)      | 0.822 (0.89)   | 0.314       |
+| RNN            | [1, 10]    | 0.550 (0.78)     | 0.709 (0.80)   | 0.159       |
+| RNN            | [11, 50]   | 0.641 (0.79)     | 0.784 (0.83)   | 0.143       |
+| RNN            | [51, 100]  | 0.738 (0.84)     | 0.832 (0.89)   | 0.094       |
 | RNN            | [101, 500] | 0.869 (0.88)     | 0.898 (0.90)   | 0.029       |
 | RNN            | [500, +∞)  | 0.923 (0.91)     | 0.932 (0.92)   | 0.009       |
-| RNNatt         | [1, 10]    | 0.540 (0.69)     | 0.699 (0.78)   | 0.159       |
-| RNNatt         | [11, 50]   | 0.504 (0.79)     | 0.723 (0.83)   | 0.219       |
-| RNNatt         | [51, 100]  | 0.488 (0.89)     | 0.831 (0.90)   | 0.343       |
+| RNNatt         | [1, 10]    | 0.530 (0.69)     | 0.699 (0.78)   | 0.169       |
+| RNNatt         | [11, 50]   | 0.614 (0.79)     | 0.723 (0.83)   | 0.109       |
+| RNNatt         | [51, 100]  | 0.748 (0.89)     | 0.831 (0.90)   | 0.083       |
 | RNNatt         | [101, 500] | 0.887 (0.90)     | 0.900 (0.91)   | 0.013       |
 | RNNatt         | [500, +∞)  | 0.940 (0.92)     | 0.943 (0.92)   | 0.003       |
-| CNN            | [1, 10]    | 0.512 (0.64)     | 0.698 (0.71)   | 0.186       |
-| CNN            | [11, 50]   | 0.482 (0.78)     | 0.734 (0.81)   | 0.252       |
-| CNN            | [51, 100]  | 0.603 (0.83)     | 0.827 (0.90)   | 0.224       |
+| CNN            | [1, 10]    | 0.532 (0.64)     | 0.698 (0.71)   | 0.166       |
+| CNN            | [11, 50]   | 0.612 (0.78)     | 0.734 (0.81)   | 0.122       |
+| CNN            | [51, 100]  | 0.723 (0.83)     | 0.827 (0.90)   | 0.104       |
 | CNN            | [101, 500] | 0.840 (0.87)     | 0.899 (0.90)   | 0.059       |
 | CNN            | [500, +∞)  | 0.912 (0.91)     | 0.922 (0.92)   | 0.010       |
 | CAML           | [1, 10]    | 0.530 (0.69)     | 0.663 (0.79)   | 0.133       |
-| CAML           | [11, 50]   | 0.540 (0.80)     | 0.732 (0.84)   | 0.192       |
+| CAML           | [11, 50]   | 0.640 (0.80)     | 0.752 (0.84)   | 0.112       |
 | CAML           | [51, 100]  | 0.785 (0.85)     | 0.865 (0.90)   | 0.080       |
 | CAML           | [101, 500] | 0.897 (0.90)     | 0.910 (0.91)   | 0.013       |
 | CAML           | [500, +∞)  | 0.934 (0.93)     | 0.937 (0.93)   | 0.003       |
