@@ -43,7 +43,7 @@ The following table shows the performance of the standalone baseline models and 
 | CAML       | 0.854     | 0.978     | 0.281    | 0.676    | 0.033           | 0.808         |
 | KSI+CAML   | 0.878     | 0.980     | 0.292    | 0.664    | 0.032           | 0.814         |
 
-The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables **lower_limit_freq** and **upper_limit_freq** in the section **Data Pre-processing 1** in the notebook KSI.ipynb and running the notebook.
+The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables ***lower_limit_freq*** and ***upper_limit_freq*** in the section ***Data Pre-processing 1*** in the notebook KSI.ipynb and running the notebook.
 
 | Baseline model | Code group | Standalone model | Model with KSI | Improvement |
 |----------------|------------|------------------|----------------|-------------|
