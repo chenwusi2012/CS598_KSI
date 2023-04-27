@@ -21,14 +21,14 @@ The notebook KSI.ipynb includes the code for training the following four baselin
 The code for model evaluation is included in the notebook KSI.ipynb.
 ## Pretrained model
 
-- RNN:
-- RNN with KSI framework:
-- RNN with attention:
-- RNN with attention and KSI framework:
-- CNN:
-- CNN with KSI framework:
-- CAML:
-- CAML with KSI framework:
+- RNN: RNN_model
+- RNN with KSI framework: KSI_RNN_model
+- RNN with attention: RNNattn_model
+- RNN with attention and KSI framework: KSI_RNNattn_model
+- CNN: CNN_model 
+- CNN with KSI framework: KSI_CNN_model
+- CAML: CAML_model
+- CAML with KSI framework: KSI_CAML_model
 ## Result
 The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI.ipynb.
 

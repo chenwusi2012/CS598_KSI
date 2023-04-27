@@ -49,7 +49,7 @@ def testmodel(model, modelstate, sim, batchtest_data, wikivec, topk):
         if np.sum(y_true[col]) != 0:
             temptrue.append(y_true[col])
             tempscores.append(y_scores[col])
-            
+
     temptrue = np.array(temptrue)
     tempscores = np.array(tempscores)
     y_true = temptrue.T
