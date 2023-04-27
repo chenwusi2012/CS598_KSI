@@ -19,7 +19,7 @@ The notebook KSI.ipynb includes the code for training the following four baselin
 - Convolutional attention (CAML).
 ## Model Evaluation
 The code for model evaluation is included in the notebook KSI.ipynb.
-## Pretrained model
+## Pretrained Model
 
 - RNN: RNN_model
 - RNN with KSI framework: KSI_RNN_model
@@ -29,6 +29,14 @@ The code for model evaluation is included in the notebook KSI.ipynb.
 - CNN with KSI framework: KSI_CNN_model
 - CAML: CAML_model
 - CAML with KSI framework: KSI_CAML_model
+
+## Files in This Repository
+
+- KSI.ipynb: The Google Colab notebook to reproduce the main result of the original paper.
+- preprocessing.py: Include the function to process the training dataset, validation dataset, and testing dataset.
+- training.py: Include the functions to train the deep learning models used in this reproduction study.
+- testing.py: Include the functions to train the deep learning models used in this reproduction study.
+
 ## Result
 The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI.ipynb.
 
