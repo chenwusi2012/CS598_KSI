@@ -21,14 +21,14 @@ The notebook KSI-main.ipynb includes the code for training the following four ba
 The code for model evaluation is included in the notebook KSI-main.ipynb.
 ## Pretrained Model
 
-- RNN: RNN_model
-- RNN with KSI framework: KSI_RNN_model
-- RNN with attention: RNNattn_model
-- RNN with attention and KSI framework: KSI_RNNattn_model
-- CNN: CNN_model 
-- CNN with KSI framework: KSI_CNN_model
-- CAML: CAML_model
-- CAML with KSI framework: KSI_CAML_model
+- RNN: RNN_model.zip
+- RNN with KSI framework: KSI_RNN_model.zip
+- RNN with attention: RNNattn_model.zip
+- RNN with attention and KSI framework: KSI_RNNattn_model.zip
+- CNN: CNN_model.zip 
+- CNN with KSI framework: KSI_CNN_model.zip
+- CAML: CAML_model.zip
+- CAML with KSI framework: KSI_CAML_model.zip
 
 ## Files in This Repository
 
@@ -37,7 +37,7 @@ The code for model evaluation is included in the notebook KSI-main.ipynb.
 - preprocessing.py: Include the function to process the training dataset, validation dataset, and testing dataset.
 - training.py: Include the functions to train the deep learning models used in this reproduction study.
 - testing.py: Include the functions to train the deep learning models used in this reproduction study.
-- Pretrained models: RNN_model, KSI_RNN_model, RNNattn_model, KSI_RNNattn_model, CNN_model, KSI_CNN_model, CAML_model, KSI_CAML_model
+- Pretrained models: RNN_model.zip, KSI_RNN_model.zip, RNNattn_model.zip, KSI_RNNattn_model.zip, CNN_model.zip, KSI_CNN_model.zip, CAML_model.zip, KSI_CAML_model.zip
 
 ## Result
 The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI-main.ipynb.
