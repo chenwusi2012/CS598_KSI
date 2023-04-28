@@ -4,21 +4,21 @@ The repository contains the code to reproduce the result of the main experiment 
 - Link to the original paper: [https://doi.org/10.1145/3308558.3313485](https://doi.org/10.1145/3308558.3313485).
 - Link to the GitHub repository of the original paper: [https://github.com/tiantiantu/KSI](https://github.com/tiantiantu/KSI).
 ## Dependency
-To reproduce the result, run notebook file KSI.ipynb in Google Colab environment. Therefore, there is no need to set up the environment on a local machine.
+To reproduce the result, run notebook file KSI-main.ipynb in Google Colab environment. Therefore, there is no need to set up the environment on a local machine.
 ## Dataset
 To reproduce the result, the following dataset are used:
-- ***Clinical notes and diagnosis in MIMIC-III dataset***: To gain access to this dataset, pass the training "CITI Data or Specimens Only Research" at [https://about.citiprogram.org/](https://about.citiprogram.org/), and apply for the access to the MIMIC-III Clinical Database at PhysioNet at [https://physionet.org/content/mimiciii/1.4/](https://physionet.org/content/mimiciii/1.4/). After gaining the access, download "NOTEEVENTS.csv" and "DIAGNOSES_ICD.csv" from PhysioNet, and upload these two CSV files to a created folder "cs598_project" in Google drive. The notebook KSI.ipynb will load these two CSV files from Google drive.
-- ***Wikipedia pages of ICD-9 diagnosis codes***: This is available at [https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge](https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge). The notebook KSI.ipynb will download this file from the GitHub repository of the original paper automatically.
+- ***Clinical notes and diagnosis in MIMIC-III dataset***: To gain access to this dataset, pass the training "CITI Data or Specimens Only Research" at [https://about.citiprogram.org/](https://about.citiprogram.org/), and apply for the access to the MIMIC-III Clinical Database at PhysioNet at [https://physionet.org/content/mimiciii/1.4/](https://physionet.org/content/mimiciii/1.4/). After gaining the access, download "NOTEEVENTS.csv" and "DIAGNOSES_ICD.csv" from PhysioNet, and upload these two CSV files to a created folder "cs598_project" in Google Drive. The notebook KSI-main.ipynb will load these two CSV files from Google Drive.
+- ***Wikipedia pages of ICD-9 diagnosis codes***: This is available at [https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge](https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge). The notebook KSI-main.ipynb will download this file from the GitHub repository of the original paper automatically.
 ## Data Preprocessing
-The code for data preprocessing is included in the notebook KSI.ipynb.
+The code for data preprocessing is included in the notebook KSI-main.ipynb.
 ## Model Training
-The notebook KSI.ipynb includes the code for training the following four baseline deep learning models and the four models with KSI framework:
+The notebook KSI-main.ipynb includes the code for training the following four baseline deep learning models and the four models with KSI framework:
 - Recurrent neural network (RNN).
 - Recurrent neural network with attention (RNNatt).
 - Convolutional neural network (CNN).
 - Convolutional attention (CAML).
 ## Model Evaluation
-The code for model evaluation is included in the notebook KSI.ipynb.
+The code for model evaluation is included in the notebook KSI-main.ipynb.
 ## Pretrained Model
 
 - RNN: RNN_model
@@ -32,13 +32,15 @@ The code for model evaluation is included in the notebook KSI.ipynb.
 
 ## Files in This Repository
 
-- KSI.ipynb: The Google Colab notebook to reproduce the main result of the original paper.
+- KSI-main.ipynb: The Google Colab notebook to reproduce the main result of the original paper.
+- KSI-ablation: The Google Colab notebook for ablation study.
 - preprocessing.py: Include the function to process the training dataset, validation dataset, and testing dataset.
 - training.py: Include the functions to train the deep learning models used in this reproduction study.
 - testing.py: Include the functions to train the deep learning models used in this reproduction study.
+- Pretrained models: RNN_model, KSI_RNN_model, RNNattn_model, KSI_RNNattn_model, CNN_model, KSI_CNN_model, CAML_model, KSI_CAML_model
 
 ## Result
-The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI.ipynb.
+The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI-main.ipynb.
 
 | Method     | Macro AUC | Micro AUC | Macro F1 | Micro F1 | Test loss value | Top-10 recall |
 |------------|-----------|-----------|----------|----------|-----------------|---------------|
@@ -51,7 +53,7 @@ The following table shows the performance of the standalone baseline models and 
 | CAML       | 0.854     | 0.978     | 0.281    | 0.676    | 0.033           | 0.808         |
 | KSI+CAML   | 0.878     | 0.980     | 0.292    | 0.664    | 0.032           | 0.814         |
 
-The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables ***lower_limit_freq*** and ***upper_limit_freq*** in the section ***Data Pre-processing 1*** in the notebook KSI.ipynb and running the notebook.
+The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables ***lower_limit_freq*** and ***upper_limit_freq*** in the section ***3.1 Data Pre-processing 1*** in the notebook KSI-main.ipynb and running the notebook.
 
 | Baseline model | Code group | Standalone model | Model with KSI | Improvement |
 |----------------|------------|------------------|----------------|-------------|
