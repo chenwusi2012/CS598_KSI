@@ -59,10 +59,13 @@ The folder pretrained_models includes the following pre-trained models:
 - KSI_ablation2: The Google Colab notebook for ablation study 2 of the reproduction study (section 4.4 of the report).
 - preprocessing.py: Include the function to process the training dataset, validation dataset, and testing dataset.
 - training.py: Include the functions to train the deep learning models used in this reproduction study.
-- testing.py: Include the functions to train the deep learning models used in this reproduction study.
+- testing.py: Include the functions to test the deep learning models used in this reproduction study.
 - Pretrained models: RNN_model.zip, KSI_RNN_model.zip, RNNattn_model.zip, KSI_RNNattn_model.zip, CNN_model.zip, KSI_CNN_model.zip, CAML_model.zip, KSI_CAML_model.zip
 
 ## Result
+
+### Result 1 (Section 4.1 of Original Paper)
+
 The following table shows the performance of the standalone baseline models and the baseline models with KSI framework in the task of ICD-9 diagnosis code prediction from the clinical notes from MIMIC-III dataset. The result of the following table can be reproduced by running the notebook KSI_main.ipynb.
 
 | Method     | Macro AUC | Micro AUC | Macro F1 | Micro F1 | Test loss value | Top-10 recall |
@@ -76,7 +79,9 @@ The following table shows the performance of the standalone baseline models and 
 | CAML       | 0.854     | 0.978     | 0.281    | 0.676    | 0.033           | 0.808         |
 | KSI+CAML   | 0.878     | 0.980     | 0.292    | 0.664    | 0.032           | 0.814         |
 
-The following table show the macro-averaged AUC scores by the frequency of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables ***lower_limit_freq*** and ***upper_limit_freq*** in the section ***3.1 Data Pre-processing 1*** in the notebook KSI_main.ipynb and running the notebook.
+### Result 2 (Section 4.1 of Original Paper)
+
+The following table show the macro-averaged AUC scores by the frequency groups of the ICD-9 diagnosis codes in MIMIC-III dataset. The result of the following table can be reproduced by adjusting the values of the variables ***lower_limit_freq*** and ***upper_limit_freq*** in the section ***3.1 Data Pre-processing 1*** in the notebook KSI_main.ipynb and running the notebook.
 
 | Baseline model | Code group | Standalone model | Model with KSI | Improvement |
 |----------------|------------|------------------|----------------|-------------|
