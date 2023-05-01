@@ -1,30 +1,52 @@
 # Reproduction Study for CS598 Deep Learning for Healthcare (Team 13, Paper 184)
 ## Original Paper
-The repository contains the code to reproduce the result of the main experiment of the paper: Bai, T., Vucetic, S., Improving Medical Code Prediction from Clinical Text via Incorporating Online Knowledge Sources, The Web Conference (WWW'19), 2019.
+
+The repository contains the code to reproduce the result of the main experiment of the paper: **Bai, T., Vucetic, S., Improving Medical Code Prediction from Clinical Text via Incorporating Online Knowledge Sources, The Web Conference (WWW'19), 2019**.
 - Link to the original paper: [https://doi.org/10.1145/3308558.3313485](https://doi.org/10.1145/3308558.3313485).
 - Link to the GitHub repository of the original paper: [https://github.com/tiantiantu/KSI](https://github.com/tiantiantu/KSI).
+
 ## Dependency
-To reproduce the result, run notebook file KSI_main.ipynb in Google Colab environment. Therefore, there is no need to set up the environment on a local machine.
-## Dataset
+
+To reproduce the result, run notebook file KSI_main.ipynb in Google Colab environment. If you would like to run ksi_main.ipynb on a local machine, update the version of Python to Python 3.10.11 and install the following dependencies:
+- torch==2.0.0
+- numpy==1.22.4
+- sklearn==1.2.2
+- stop-words==2018.7.23
+- pandas==1.5.3
+requirements.txt is included in this repository. You can install the above dependencies automatically by running the following command:
+```shell
+pip install -r requirements.txt
+```
+
+## Dataset (Data Download Instruction)
+
 To reproduce the result, the following dataset are used:
-- ***Clinical notes and diagnosis in MIMIC-III dataset***: To gain access to this dataset, pass the training "CITI Data or Specimens Only Research" at [https://about.citiprogram.org/](https://about.citiprogram.org/), and apply for the access to the MIMIC-III Clinical Database at PhysioNet at [https://physionet.org/content/mimiciii/1.4/](https://physionet.org/content/mimiciii/1.4/). After gaining the access, download "NOTEEVENTS.csv" and "DIAGNOSES_ICD.csv" from PhysioNet, and upload these two CSV files to a created folder "cs598_project" in Google Drive. The notebook KSI_main.ipynb will load these two CSV files from Google Drive.
+- ***Discharge summary notes and accompanying ICD-9 diagnosis codes from MIMIC-III dataset***: To gain access to this dataset, pass the training "CITI Data or Specimens Only Research" at [https://about.citiprogram.org/](https://about.citiprogram.org/), and apply for the access to the MIMIC-III Clinical Database at PhysioNet at [https://physionet.org/content/mimiciii/1.4/](https://physionet.org/content/mimiciii/1.4/). After gaining the access, download "NOTEEVENTS.csv" and "DIAGNOSES_ICD.csv" from PhysioNet, and upload these two CSV files to a created folder "cs598_project" in Google Drive. The notebook KSI_main.ipynb will load these two CSV files from Google Drive.
 - ***Wikipedia pages of ICD-9 diagnosis codes***: This is available at [https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge](https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge). The notebook KSI_main.ipynb will download this file from the GitHub repository of the original paper automatically.
 ## Data Preprocessing
-The code for data preprocessing is included in the notebook KSI_main.ipynb.
+
+The code for data preprocessing is included in the notebook KSI_main.ipynb. Please refer to section 3 of the notebook KSI_main.ipynb.
+
 ## Model Training
-The notebook KSI_main.ipynb includes the code for training the following four baseline deep learning models and the four models with KSI framework:
+
+The notebook KSI_main.ipynb and the Python file training.py includes the code for training the following four baseline deep learning models and the baseline models with the KSI framework:
 - Recurrent neural network (RNN).
 - Recurrent neural network with attention (RNNatt).
 - Convolutional neural network (CNN).
 - Convolutional attention (CAML).
+
+
 ## Model Evaluation
-The code for model evaluation is included in the notebook KSI_main.ipynb.
+
+The code for model evaluation is included in the notebook KSI_main.ipynb and the Python file testing.py.
+
 ## Pretrained Model
 
+The folder pretrained_models includes the following pre-trained models:
 - RNN: RNN_model.zip
-- RNN with KSI framework: KSI_RNN_model.zip
+- RNN with the KSI framework: KSI_RNN_model.zip
 - RNN with attention: RNNattn_model.zip
-- RNN with attention and KSI framework: KSI_RNNattn_model.zip
+- RNN with attention and the KSI framework: KSI_RNNattn_model.zip
 - CNN: CNN_model.zip 
 - CNN with KSI framework: KSI_CNN_model.zip
 - CAML: CAML_model.zip
