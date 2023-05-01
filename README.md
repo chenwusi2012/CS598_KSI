@@ -32,8 +32,9 @@ The code for model evaluation is included in the notebook KSI-main.ipynb.
 
 ## Files in This Repository
 
-- KSI-main.ipynb: The Google Colab notebook to reproduce the main result of the original paper.
-- KSI-ablation: The Google Colab notebook for ablation study.
+- KSI_main.ipynb: The Google Colab notebook to reproduce the main result of the original paper.
+- KSI_ablation1: The Google Colab notebook for ablation study 1 of the reproduction study (section 4.3 of the report).
+- KSI_ablation2: The Google Colab notebook for ablation study 2 of the reproduction study (section 4.4 of the report).
 - preprocessing.py: Include the function to process the training dataset, validation dataset, and testing dataset.
 - training.py: Include the functions to train the deep learning models used in this reproduction study.
 - testing.py: Include the functions to train the deep learning models used in this reproduction study.
