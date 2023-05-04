@@ -26,7 +26,7 @@ To reproduce the result, the following dataset are used:
 - ***Wikipedia pages of ICD-9 diagnosis codes***: This is available at [https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge](https://github.com/tiantiantu/KSI/blob/master/wikipedia_knowledge). The notebook `KSI_main.ipynb` will download this file from the GitHub repository of the original paper automatically.
 ## Data Preprocessing
 
-The code for data preprocessing is included in the notebook KSI_main.ipynb and the Python file `preprocessing.py`. Please refer to section 3 of the notebook `KSI_main.ipynb` and the function in the Python file `preprocessing.py`.
+The code for data preprocessing is included in the notebook `KSI_main.ipynb` and the Python file `preprocessing.py`. Please refer to section 3 of the notebook `KSI_main.ipynb` and the function in the Python file `preprocessing.py`.
 
 ## Model Training
 
