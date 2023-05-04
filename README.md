@@ -12,7 +12,7 @@ To reproduce the result, run notebook file `KSI_main.ipynb` in Google Colab envi
 - `numpy==1.22.4`
 - `sklearn==1.2.2`
 - `stop-words==2018.7.23`
-- `pandas==1.5.3`
+- `pandas==1.5.3`  
 `requirements.txt` is included in this repository. You can install the above dependencies automatically by running the following command:
 ```shell
 pip install -r requirements.txt
